@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/not_found/recur
+END
+isfound.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/not_found/recur/isfound.txt
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/not_found/recur/__init__.py
+END

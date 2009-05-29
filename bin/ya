@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# globals vars
+
+
+#lib_dir='/usr/lib/python2.5/site-packages/yarara'
+lib_dir='../yarara/'
+PATH=$PATH:'../bin'
+#PATH=$PATH:'/usr/bin:/bin'
+PYTHONPATH=$PYTHONPATH:'../yarara/'
+
+# 
+# init
+#
+function init()
+{
+    if [ -z $1 ]; then
+        cp -r $lib_dir/zero/* .
+    else
+        cp -r $lib_dir/zero "$1"
+    fi
+}
+
+
+#
+# serve
+#
+serve()
+{
+    if [ -f server.py ]; then
+        python server.py  
+    else
+        echo "server.py don't exist. Try in the root directory."
+    fi
+}
+
+#
+# deploy
+#
+deploy()
+{
+    scp -r . $YA_TARGET
+}
+case "$1" in
+init)
+    init $2
+    ;;
+
+serve)
+    serve
+    ;;
+deploy)
+    deploy
+    ;;
+*)
+    echo "Usage: ya {init|serve|help}"
+    exit 1
+    ;;
+esac
+
+exit 0

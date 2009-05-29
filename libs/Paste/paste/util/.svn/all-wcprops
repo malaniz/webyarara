@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/7821/Paste/trunk/paste/util
+END
+UserDict24.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/5334/Paste/trunk/paste/util/UserDict24.py
+END
+classinit.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/3373/Paste/trunk/paste/util/classinit.py
+END
+classinstance.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/3668/Paste/trunk/paste/util/classinstance.py
+END
+converters.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/5720/Paste/trunk/paste/util/converters.py
+END
+datetimeutil.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/5837/Paste/trunk/paste/util/datetimeutil.py
+END
+findpackage.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/3373/Paste/trunk/paste/util/findpackage.py
+END
+ip4.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/4824/Paste/trunk/paste/util/ip4.py
+END
+threadedprint.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/7491/Paste/trunk/paste/util/threadedprint.py
+END
+subprocess24.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/4217/Paste/trunk/paste/util/subprocess24.py
+END
+multidict.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/6182/Paste/trunk/paste/util/multidict.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/4197/Paste/trunk/paste/util/__init__.py
+END
+looper.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/6182/Paste/trunk/paste/util/looper.py
+END
+import_string.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/6280/Paste/trunk/paste/util/import_string.py
+END
+intset.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/4566/Paste/trunk/paste/util/intset.py
+END
+PySourceColor.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/7257/Paste/trunk/paste/util/PySourceColor.py
+END
+finddata.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/7437/Paste/trunk/paste/util/finddata.py
+END
+doctest24.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/7354/Paste/trunk/paste/util/doctest24.py
+END
+template.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/6639/Paste/trunk/paste/util/template.py
+END
+scgiserver.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/7821/Paste/trunk/paste/util/scgiserver.py
+END
+string24.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/3373/Paste/trunk/paste/util/string24.py
+END
+threadinglocal.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5837/Paste/trunk/paste/util/threadinglocal.py
+END
+dateinterval.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/3373/Paste/trunk/paste/util/dateinterval.py
+END
+mimeparse.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/7735/Paste/trunk/paste/util/mimeparse.py
+END
+killthread.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/7401/Paste/trunk/paste/util/killthread.py
+END
+filemixin.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/6046/Paste/trunk/paste/util/filemixin.py
+END
+quoting.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/7652/Paste/trunk/paste/util/quoting.py
+END

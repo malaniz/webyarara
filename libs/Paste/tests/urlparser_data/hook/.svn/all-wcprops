@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/4073/Paste/trunk/tests/urlparser_data/hook
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/4073/Paste/trunk/tests/urlparser_data/hook/__init__.py
+END
+app.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/hook/app.py
+END
+index.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/hook/index.py
+END

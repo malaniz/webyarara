@@ -1,0 +1,7 @@
+K 13
+svn:externals
+V 79
+mochikit http://svn.mochikit.com/mochikit/tags/MochiKit-1.3.1/packed/MochiKit
+
+
+END

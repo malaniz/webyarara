@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/5398/Paste/trunk/tests/urlparser_data/find_file/dir%20with%20spaces
+END
+test 4.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/5398/Paste/trunk/tests/urlparser_data/find_file/dir%20with%20spaces/test%204.html
+END

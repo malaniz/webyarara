@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5398/Paste/trunk/tests/urlparser_data/find_file
+END
+test2.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/find_file/test2.html
+END
+index.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/find_file/index.txt
+END
+test 3.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/5398/Paste/trunk/tests/urlparser_data/find_file/test%203.html
+END

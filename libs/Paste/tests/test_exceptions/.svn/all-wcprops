@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/7354/Paste/trunk/tests/test_exceptions
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/3373/Paste/trunk/tests/test_exceptions/__init__.py
+END
+test_httpexceptions.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/7268/Paste/trunk/tests/test_exceptions/test_httpexceptions.py
+END
+test_reporter.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/5634/Paste/trunk/tests/test_exceptions/test_reporter.py
+END
+test_formatter.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/7354/Paste/trunk/tests/test_exceptions/test_formatter.py
+END
+test_error_middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/7271/Paste/trunk/tests/test_exceptions/test_error_middleware.py
+END

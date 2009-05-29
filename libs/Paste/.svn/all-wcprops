@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/!svn/ver/7858/Paste/trunk
+END
+regen-docs
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/7347/Paste/trunk/regen-docs
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/!svn/ver/7576/Paste/trunk/setup.py
+END
+setup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/!svn/ver/6663/Paste/trunk/setup.cfg
+END

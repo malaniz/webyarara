@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/4772/Paste/trunk/tests/test_auth
+END
+test_auth_cookie.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/4073/Paste/trunk/tests/test_auth/test_auth_cookie.py
+END
+test_auth_digest.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/4772/Paste/trunk/tests/test_auth/test_auth_digest.py
+END

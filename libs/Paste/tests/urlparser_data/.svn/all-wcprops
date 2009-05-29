@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/5399/Paste/trunk/tests/urlparser_data
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/3373/Paste/trunk/tests/urlparser_data/__init__.py
+END
+secured.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/5399/Paste/trunk/tests/urlparser_data/secured.txt
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/7520/Paste/trunk/paste/exceptions
+END
+serial_number_generator.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/7520/Paste/trunk/paste/exceptions/serial_number_generator.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5367/Paste/trunk/paste/exceptions/__init__.py
+END
+reporter.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/7268/Paste/trunk/paste/exceptions/reporter.py
+END
+formatter.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5818/Paste/trunk/paste/exceptions/formatter.py
+END
+collector.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/7271/Paste/trunk/paste/exceptions/collector.py
+END
+errormiddleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/7484/Paste/trunk/paste/exceptions/errormiddleware.py
+END

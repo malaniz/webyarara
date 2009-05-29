@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 46
+MANIFEST
+dist
+build
+Paste.egg-info
+*.tmp
+temp
+
+END
