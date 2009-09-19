@@ -1,4 +1,4 @@
-"""
+licence = """
 
 Copyright (c) 2009, Marcelo Alaniz.
 All rights reserved.
@@ -88,7 +88,8 @@ class Ya(object):
       'raise_view_exceptions': False,
       # Custom Middleware
       'middleware': []
-    } # end default configuration --------------------------
+    } 
+    # end default configuration --------------------------
     if configuration is not None: self.config.update(configuration)
     if self.config['use_static']:
       self.setup_static()
@@ -358,7 +359,6 @@ class YaResponse(object):
     return self.append(text)
 
   def render(self):
-    """ Return 3-tuple (status_string, headers, body). """
     status_string = '%s %s' %(self.config['status'], 
       self.status_codes[self.config['status']])
     headers = [(k, str(v)) for k, v in self.config['headers'].items()]
@@ -423,21 +423,16 @@ def delete(url=None): return route(url, 'delete')
 _response = None
 
 def append(body):
-    """Add text to response body. """
     global _response
     return _response.append(body)
 
 def header(key, value):
-    """Set a response header. """
     global _response
     return _response.header(key, value)
 
-def content_type(type):
-    """Set the content type header. """
-    header('Content-Type', type)
+def content_type(type): header('Content-Type', type)
 
-def status(code):
-    _response.config['status'] = code
+def status(code): _response.config['status'] = code
 
 
 #
@@ -457,14 +452,12 @@ def assign(from_, to):
       def temp(web): redirect(to)
 
 def notfound(error='Unspecified error', file=None):
-    """Sets the response to a 404, sets the body to 404_template."""
     if config('log'): print >>sys.stderr, 'Not Found: %s' % error
     status(404)
     if file is None: file = config('404_template')
     return template(file, error=error)
 
 def servererror(error='Unspecified error', file=None):
-    """Sets the response to a 500, sets the body to 500_template."""
     if config('log'): print >>sys.stderr, 'Error: (%s, %s, %s)' % sys.exc_info()
     status(500)
     if file is None: file = config('500_template')
@@ -477,7 +470,6 @@ def servererror(error='Unspecified error', file=None):
 #
 
 def static_serve(web, file):
-    """The default static file serve function. Maps arguments to dir structure."""
     file = os.path.join(config('static_root'), file)
     print "file: %s " % file
     realfile = os.path.realpath(file)
@@ -488,9 +480,6 @@ def static_serve(web, file):
 
 
 def yield_file(filename, type=None):
-    """Append the content of a file to the response. Guesses file type if not
-    included.  Returns 1 if requested file can't be accessed (often means doesn't 
-    exist).  Returns 2 if requested file is a directory.  Returns 7 on success. """
     if not os.access(filename, os.F_OK): return 1
     if os.path.isdir(filename): return 2
     if type is None:
@@ -506,42 +495,26 @@ def yield_file(filename, type=None):
 #
 
 def template(template_path, template_dict=None, **kwargs):
-  """Append a rendered template to response.  If template_dict is provided,
-  it is passed to the render function.  If not, kwargs is."""
-  # Retreive a template object.
   t = get_template(template_path)
-  # Render it without arguments.
   if not kwargs and not template_dict: 
     return append(render_template(t))
-  # Render the template with a provided template dictionary
   if template_dict: 
     return append(render_template(t, **template_dict))
-  # Render the template with **kwargs
   return append(render_template(t, **kwargs))
 
 def get_template(template_path):
-  """Returns a template object by calling the default value of
-  'get_template_handler'.  Allows getting a template to be the same
-  regardless of template library."""
-  if config('use_templates'):
+  if config('use_templates'): 
     return config('get_template_handler')(template_path)
-  else: return "caca" 
+  else: return "wtf?!" 
 
 
 # The default value of config('get_template_handler')
 def _get_template_handler(template_path):
-  """Return a template object.  This is defined for the Jinja2 and
-  Mako libraries, otherwise you have to override it.  Takes one 
-  parameter: a string containing the desired template path.  Needs
-  to return an object that will be passed to your rendering function."""
   if config('use_templates'):
     return config('template_env').get_template(template_path)
   else: return None
 
 def render_template(template_obj, **kwargs):
-  """Renders a template object by using the default value of
-  'render_template_handler'.  Allows rendering a template to be consistent
-  regardless of template library."""
   if config('use_templates'):
     #print config('render_template_handler')(template_obj, **kwargs)
     return config('render_template_handler')(template_obj, **kwargs)
@@ -549,10 +522,6 @@ def render_template(template_obj, **kwargs):
 
 # The default value of config('render_template_handler')
 def _render_template_handler(template_obj, **kwargs):
-  """Renders template object with an optional dictionary of values.
-  Defined for Jinja2 and Mako - override it if you use another
-  library.  Takes a template object as the first parameter, with an
-  optional **kwargs parameter.  Needs to return a string."""
   if config('template_lib') == 'mako': return template_obj.render(**kwargs)
   if config('template_lib') == 'jinja2':
     # Jinja needs its output encoded here
@@ -562,8 +531,6 @@ def _render_template_handler(template_obj, **kwargs):
     return template_obj.render(Context(kwargs))
 
 def autotemplate(urls, template_path):
-  """Automatically renders a template for a given path.  Currently can't
-  use any arguments in the url."""
   if type(urls) not in (list, tuple): urls = urls[urls]
   for url in urls:
     @route(url)
@@ -576,7 +543,7 @@ def autotemplate(urls, template_path):
 #
 
 class YaModelMetaClass(type):
-  def __new__(cls, name, bases, dct):
+  def __new__(cls, name, bases, dct): 
     return type.__new__(cls, name, bases, dct)
   def __init__(cls, name, bases, dct):
     super(YaModelMetaClass, cls).__init__(name, bases, dct)
@@ -707,6 +674,11 @@ def _load_middleware(app, middleware_list):
       print 'Warning: failed to load middleware %s' % name
   return app
 
+def run_appengine(process_func):
+  from google.appengine.ext.webapp.util import run_wsgi_app
+  return run_wsgi_app(get_application(process_func))
+
+
 def run_dev(addr, port, process_func):
   from wsgiref.simple_server import make_server
   app = get_application(process_func)
@@ -727,13 +699,5 @@ def run_dev(addr, port, process_func):
   except:
     print 'Interrupted; yarara it is down...'
     srv.socket.close()
-
-def run_appengine(process_func):
-  from google.appengine.ext.webapp.util import run_wsgi_app
-  return run_wsgi_app(get_application(process_func))
-  #from google.appengine.ext import webapp
-  #application = webapp.WSGIApplication([('/', get_application(process_func))], debug=True)
-  #run_wsgi_app(get_application(application) ) 
-
 
 
