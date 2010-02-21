@@ -32,7 +32,7 @@ class Ya(object):
       # static files
       'use_static': True,
       'static_url': '/static/*:file/',
-      'static_root': os.path.join(self.app_path, 'static'),
+      'static_root': os.path.join(self.app_path, 'static/'),
       'static_handler': static_serve,
       # template options
       'use_templates': False,
@@ -266,7 +266,6 @@ class YaRequest(object):
       self.user_agent = ''
     self.combine_request_dicts()
     if config('use_sessions') and config('session_lib') == 'beaker':
-      #print request
       self.session = request['beaker.session']
     else:
       self.session = None
@@ -456,8 +455,7 @@ def servererror(error='Unspecified error', file=None):
 
 def static_serve(web, file):
     """The default static file serve function. Maps arguments to dir structure."""
-    file = file.split('/')
-    file = os.path.join(config('static_root'), *file)
+    file = os.path.join(config('static_root'), file)
     print "file: %s " % file
     realfile = os.path.realpath(file)
     if not realfile.startswith(config('static_root')):
@@ -576,6 +574,12 @@ def model(model_name, **kwargs):
     if self not in s: s.add(self)
     s.commit()
     return self
+ 
+  def delete(self):
+    s = session()
+    if self in s: s.delete(self)
+    s.commit()
+    return self
 
   def __repr__(self):    return u'<%s: id=%s>' % (self.__name__, self.id)
   def __str__(self):    return '<%s: id=%s>' % (self.__name__, self.id)
@@ -588,6 +592,7 @@ def model(model_name, **kwargs):
     '__init__': __init__,
     'add': add,
     'save': save,
+    'delete': delete,
     '__name__': model_name,
     '__repr__': __repr__,
     '__str__' : __str__,
